@@ -1,5 +1,6 @@
 group 'com'
 version '1.0-SNAPSHOT'
+
 buildscript {
     repositories {
         mavenCentral()
@@ -16,14 +17,22 @@ jar {
     baseName = 'address-restService'
     version =  '0.1.0'
 }
+
 repositories {
     mavenCentral()
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
 dependencies {
+    testCompile("junit:junit")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile "com.github.tomakehurst:wiremock:2.5.0"
     compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework:spring-web")
     compile("com.fasterxml.jackson.core:jackson-databind")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.apache.logging.log4j:log4j-core")
+    compile("org.apache.logging.log4j:log4j-api")
 }

@@ -1,0 +1,5 @@
+url:
+  endpoint: "http://api.getthedata.com/postcode/"
+
+server:
+  port: 9898
